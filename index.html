@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazzêro Espetinhos - Cardápio Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-img">
+                <img src="img/logo-brazzero.png" alt="Logo Brazzêro Espetinhos">
+            </div>
+            <h1 class="logo">Brazzêro Espetinhos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#combos">Combos</a></li>
+                <li><a href="#comidas">Comidas</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="#pagamento" class="pagar-btn">Pagar</a></li>
+            </ul>
+        </nav>
+        <div class="endereco">
+            <p>Rua da Linha, nº 18, Bairro dos 46 - Camaçari</p>
+            <p class="social-media"><a href="https://www.instagram.com/BrazzeroEspetinhos/" target="_blank"><i class="fab fa-instagram"></i> @BrazzeroEspetinhos</a></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="banner">
+            <div class="banner-content">
+                <h2>Sabor e Qualidade em Cada Espetinho</h2>
+                <p>Experimente o melhor da culinária de espetinhos!</p>
+            </div>
+        </section>
+
+        <section id="combos" class="menu-section">
+            <h2 class="section-title">Combos</h2>
+            <div class="card-container" id="combos-container">
+                <!-- Cards de combos serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <section id="comidas" class="menu-section">
+            <h2 class="section-title">Comidas</h2>
+            <div class="card-container" id="comidas-container">
+                <!-- Cards de comidas serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <section id="bebidas" class="menu-section">
+            <h2 class="section-title">Bebidas</h2>
+            <div class="card-container" id="bebidas-container">
+                <!-- Cards de bebidas serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <div class="fazer-pedido">
+            <button id="btn-fazer-pedido">Fazer Pedido</button>
+            <button id="btn-pagar" class="btn-pagar">Pagar com PIX</button>
+        </div>
+
+        <section id="pagamento" class="pagamento-section">
+            <h2 class="section-title">Pagamento via PIX</h2>
+            <div class="pagamento-container">
+                <div class="qrcode-container">
+                    <img src="img/qrcode-pix.png" alt="QR Code PIX" class="qrcode-img">
+                </div>
+                <div class="pix-copia-cola">
+                    <h3>Código PIX Copia e Cola</h3>
+                    <textarea id="pix-code-estatico" readonly>00020126330014BR.GOV.BCB.PIX0111035591505745204000053039865802BR5919BRAZZERO ESPETINHOS6008CAMACARI610842803-00062070503***6304F3E6</textarea>
+                    <button id="copiar-pix-estatico">Copiar Código</button>
+                </div>
+                <p class="pagamento-info">Após realizar o pagamento, mostre o comprovante ao atendente.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal do Pedido -->
+    <div id="modal-pedido" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal">&times;</span>
+            <h2>Resumo do Pedido</h2>
+            <div id="itens-pedido">
+                <!-- Itens do pedido serão inseridos aqui via JavaScript -->
+            </div>
+            <div class="totais">
+                <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+                <p>Total: R$ <span id="total">0.00</span></p>
+            </div>
+            <div class="mesa-opcao">
+                <label>
+                    <input type="checkbox" id="opcao-mesa"> Mesa
+                </label>
+                <select id="numero-mesa" disabled>
+                    <option value="">Selecione a mesa</option>
+                    <option value="01">Mesa 01</option>
+                    <option value="02">Mesa 02</option>
+                    <option value="03">Mesa 03</option>
+                    <option value="04">Mesa 04</option>
+                    <option value="05">Mesa 05</option>
+                    <option value="06">Mesa 06</option>
+                    <option value="07">Mesa 07</option>
+                    <option value="08">Mesa 08</option>
+                    <option value="09">Mesa 09</option>
+                </select>
+            </div>
+            <div class="observacao">
+                <label for="obs-pedido">Observações:</label>
+                <textarea id="obs-pedido" placeholder="Alguma observação para o seu pedido?"></textarea>
+            </div>
+            <div class="botoes-pedido">
+                <button id="revisar-pedido">Revisar Pedido</button>
+                <button id="confirmar-pedido">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-footer">
+                <img src="img/logo-brazzero.png" alt="Logo Brazzêro Espetinhos" class="footer-logo-img">
+                <h2>Brazzêro Espetinhos</h2>
+            </div>
+            <div class="contato">
+                <p>Rua da Linha, nº 18, Bairro dos 46 - Camaçari</p>
+                <p>WhatsApp: (71) 99938-7740</p>
+            </div>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/BrazzeroEspetinhos/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Brazzêro Espetinhos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
